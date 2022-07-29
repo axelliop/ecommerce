@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.acheuno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3vh;
+    
+}
+
+.contenedorproductos{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    text-align: center;
+    background-color: antiquewhite;
+        justify-content: space-evenly;
+        margin-top: 10px;
+        text-align: center;
+
+
+}
+
+.imagenalien {
+    width: 15vh;
+    height: auto;
+}
+
+.producto1{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: azure ;
+}
+
+.header{width: 100%;
+background-image: linear-gradient(to right, #252525, rgb(3, 191, 248));
+}
+
+.navbar .navbar-brand{
+    color: rgb(3, 191, 248);
+}
+
+.nav-link{color: white!important;}
