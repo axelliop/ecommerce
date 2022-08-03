@@ -20,7 +20,7 @@ mostrarColores(){
 const agregarProductos = arrayProductos.push("Heladera", "cocina", "xbox");
 arrayProductos.push("sesese")  utilizando soloo push */
 
-let ProductosElectronica = new Array(); /* APLICANDO ARRAYS!! */
+let ProductosElectronica = []; /* APLICANDO ARRAYS!! */
 ProductosElectronica.push(new Productos("Pc Alienware",100000,"Metalica"));
 ProductosElectronica.push(new Productos("Lavarropas Drean",70000,"Blanco"));
 ProductosElectronica.push(new Productos("Heladera Whirlpool",70000,"Negro"));
@@ -85,5 +85,15 @@ function mostrarColor(){
         color += "\n" + ProductosElectronica[i].mostrarColores();
     }
     return color;
-}''
+}
+
+
+/* UTILIZANDO DOM */
+
+/* PUEDO CAMBIAR DE COLOR EL H1 */
+
+/* TENGO QUE USAR TEXTCONTENT PARA CAMBIAR, SINO NO ME DEJA*/
+const saludito = prompt("Como te llamas?");
+document.querySelector('.achedos').textContent = "Estamos muy contentos de que estes aqui  " + saludito;
+
 
