@@ -76,14 +76,25 @@
         <input type="button" value="Comprar ahora" id="boton3">
       </div>
     </div>
-    <h3 class="achetres">Elementos añadidos al carrito: </h3>
-    <div id="crearBox"></div>
-    <div id="crearBox2"></div>
-    <div id="crearBox3"></div>
 
-    <div class="square" id="clickBox"> click
+
+<div class="centrarcanvas">
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Elementos Añadidos al Carrito</button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="crearBox"></div>
+        <div id="crearBox2"></div>
+        <div id="crearBox3"></div>
+      </div>
+    </div>
+
+    <div id="clickBox">
       <!-- EL ID PARA APLICAR EN EL JS -->
-      <!-- LA CLASS PARA APLICAR EN EL CSS -->
     </div>
 
 

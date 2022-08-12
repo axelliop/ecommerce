@@ -97,11 +97,7 @@ const saludito = prompt("Como te llamas?");
 document.querySelector('.achedos').textContent = "Estamos muy contentos de que estes aqui  " + saludito;
 
 
-let clickDiv = document.querySelector("#clickBox"); /* con queryselector o selectbyid funciona igual, aplico al id, O SEA SELECCIONO QUE OBJETO DEL HTML QUIERO CAMBIAR*/
-clickDiv.addEventListener('click', () => {
-    /* para añadir el evento va addEventlistener y entro del evento a aplicar, una FUNCION FLECHA QUE APLIQUE EL EVENTO HACER, DESPUES DE UN CLICK, QUE CAMBIE DE COLOR*/
-    clickDiv.classList.toggle("color"); /* verificar que es classlist, pero seguro que algo de css */
-});
+
 
 
 
@@ -115,8 +111,14 @@ boton1.addEventListener('click', crearCaja); /* CON ESTO AGREGUE EL EVENTO */
 function crearCaja() {
     /* y bueno la funcion para  que cumpla toodo el evento y reducir barras  de codigo */
     let crearCajita = document.createElement('div'); /* crea el div adicional */
-    crearCajita.classList.add('square'); /* llama a la clase square que es el cuadrado ese  rosado */
-    crearCajita.textContent = "compraste pc"
+    crearCajita.classList.add('col-12', 'h200', 'border', 'bg-white', 'rounded', 'mt-3', 'd-flex', 'align-items-center', 'p-3', 'flex-row');   /* llama a la clase square que es el cuadrado ese  rosado */
+    crearCajita.innerHTML = `<div class="divinner">
+    <img src="./alienware.jpg" alt="" class="imagensitaPc"><img>
+    </div>
+    <div class="parrafos">
+                                <h3>PC ALIENWARE</h3>                                            
+                                <p>Felicidades! lo compraste</p>
+                            </div>`
     crearBox.appendChild(crearCajita); /* el appenchild para crear todo, ESTO SIGNIFICA QUE LE CREE UN BOX AL LET CREARBOX, LLAMANDO  AL LET CREARCAJITA, QUE  APLICA LO DE ARRIBA, PARA QUE ME HAGA EL NUEVO DIV VACIO  */
 }
 
@@ -130,8 +132,14 @@ boton2.addEventListener('click', crearCaja2);
 function crearCaja2() {
 
     let crearCajita2 = document.createElement('div'); 
-    crearCajita2.classList.add('square'); 
-    crearCajita2.textContent = "compraste lavarrop"
+    crearCajita2.classList.add('col-12', 'h200', 'border', 'bg-white', 'rounded', 'mt-3', 'd-flex', 'align-items-center', 'p-3', 'flex-row');  
+    crearCajita2.innerHTML = `<div class="divinner">
+    <img src="./alienware.jpg" alt="" class="imagensitaPc"><img>
+    </div>
+    <div class="parrafos">
+                                <h3>Lavarropas Drean</h3>                                            
+                                <p>Felicidades! lo compraste</p>
+                            </div>`
     crearBox2.appendChild(crearCajita2); 
 }
 
@@ -145,9 +153,16 @@ boton3.addEventListener('click', crearCaja3);
 function crearCaja3() {
     
     let crearCajita3 = document.createElement('div'); 
-    crearCajita3.classList.add('square'); 
-    crearCajita3.textContent = "compraste heladera"
+    crearCajita3.classList.add('col-12', 'h200', 'border', 'bg-white', 'rounded', 'mt-3', 'd-flex', 'align-items-center', 'p-3', 'flex-row'); 
+    crearCajita3.innerHTML = `<div class="divinner">
+    <img src="./alienware.jpg" alt="" class="imagensitaPc"><img>
+    </div>
+    <div class="parrafos">
+                                <h3>HELADERA WHIRLPOOL</h3>                                            
+                                <p>Felicidades! la compraste</p>
+                            </div>`
     crearBox3.appendChild(crearCajita3); 
+    crearCajita3.setAttribute('id', +productos)
 }
 
 /* ------------------------------------------------------------------- */
