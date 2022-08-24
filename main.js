@@ -1,4 +1,3 @@
-
 const saludito = prompt("Como querrias que te llamemos?");
 document.querySelector('.achedos').textContent = "Estamos muy contentos de que estes aqui  " + saludito;
 
@@ -16,7 +15,13 @@ if (registrado == "no") {
 
 let edad = prompt("cuantos años tenes?");
 
-edad > 18 ? alert("podes pasar") : alert("no podes pasar");
+edad > 18 ? Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Podes ingresar a la pagina',
+    showConfirmButton: false,
+    timer: 1500
+  }) : alert("no podes pasar");
 
 
 
@@ -31,15 +36,18 @@ gestor = new GestionarProductos();
 gestor.iniciar();
 
 function aniadirCarrito(id) {
-    const prod = document.querySelector('#row_'+id);/* aplico al div row. llamo al obj id */
-    let producto =  new ProductosUno (id, 
-                                    prod.querySelector('h3').textContent, /* llamo h3*/
-                                    prod.querySelector('.precio').textContent, /* llamo precio */
-                                    prod.querySelector('img').src/* llamo img para el aniadido */
-                                    )
+    const prod = document.querySelector('#row_' + id); /* aplico al div row. llamo al obj id */
+    let producto = new Stock(id,
+        prod.querySelector('h3').textContent,
+        prod.querySelector('p').textContent,
+        prod.querySelector('.precio').textContent,
+        /* llamo h3*/
+        /* llamo precio */
+    )
 
-                                    gestor.addCart(producto); /* aplico la funcion addcart llamando al elemento producto */
+    gestor.addCart(producto); /* aplico la funcion addcart llamando al elemento producto */
 }
 
-gestor.cargarProductos( productos );/* AGREGO ESTO PARA QUE FINAAAALMENTE SE MUESTREN
+gestor.cargarProductos(productos);
+/* AGREGO ESTO PARA QUE FINAAAALMENTE SE MUESTREN
  */

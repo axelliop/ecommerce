@@ -1,4 +1,4 @@
-class ProductosUno {
+class Stock {
 
     constructor (id,nombre,descripcion,precio,img,stock){
         
