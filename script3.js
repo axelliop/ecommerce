@@ -56,6 +56,7 @@ divProductos.appendChild(prodPag);
 
 }
 
+/* para recorrer los productos y que lo muestre en el carrito */
  addCart (infoProducto) { 
 
 
@@ -119,6 +120,7 @@ mostrarTodo(){
 })             
 } 
 
+/* contar productos */
 contarCarrito(){
 
     let contadorProductos = 0;
@@ -130,6 +132,7 @@ contarCarrito(){
 
     return contadorProductos;
 }
+/* aplicar en el if y else para que las 2 funciones se ejecuten */
 actualizarCarrito(){
 
         
@@ -143,7 +146,7 @@ actualizarCarrito(){
     
 }
 
-
+/* actualiza el contador en el carrito */
 realizarCuenta(){ 
 
     let totalArticulos = this.contarCarrito();
