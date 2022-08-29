@@ -12,11 +12,12 @@ document.querySelector('.achedos').textContent = "Estamos muy contentos de que e
 document.addEventListener('DOMContentLoaded',() =>{
 
     carrito = JSON.parse(localStorage.getItem('carritos'))
-    totalCarrito = new GestionarProductos();
-    totalCarrito.iniciar();
+
 
 })
 
+totalCarrito = new GestionarProductos();
+totalCarrito.iniciar();
 
 function aniadirCarrito(id) {
     const prod = document.querySelector('#row_' + id); /* aplico al div row. llamo al obj id */

@@ -1,23 +1,37 @@
 class GestionarProductos{
     iniciar /* metodo para iniciar */(){
-
-
-fetch(link)
-
-.then(respuesta => respuesta.json())
-.then(resultado =>{
-
-    productos = resultado.productos;
-
-    this.cargarProductos(productos);
-})
+    productos = [
+{
+    "id": 1, 
+    "nombre": "PLAYSTATION 5",
+    "descripcion": "la mejor pc del mercado",
+    "precio": 100000,
+    "img":"alienware.jpg",
+    "stock": 1
+    },
+    {
+    "id": 2, 
+    "nombre": "SMART TV",
+    "descripcion": "la mejor heladdera del mercado",
+    "precio": 100000,
+    "img":"alienware.jpg",
+    "stock": 1
+    },
+    {
+    "id": 3, 
+    "nombre": "XBOX SERIES",
+    "descripcion": "el mejor lavarropas del mercado",
+    "precio": 100000,
+    "img":"alienware.jpg",
+    "stock": 1
 
     
-        
+    }
     
-
-this.mostrarTodo();
-    this.actualizarCarrito();
+    ]
+    this.cargarProductos(productos)
+this.mostrarTodo()
+this.actualizarCarrito()
 }
 
 
