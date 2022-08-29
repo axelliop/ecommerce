@@ -29,26 +29,27 @@ storage(){
 
 
 
-    cargarProductos( productos ) {
-        const divProductos    = document.querySelector('#productos'); 
-        divProductos.innerHTML = ''; 
+cargarProductos( productos ) {
+    const divProductos    = document.querySelector('#productos'); 
+    divProductos.innerHTML = ''; 
 
 productos.forEach((producto) =>{  
 
 let prodPag = document.createElement('div'); 
-prodPag.classList.add('contenedorDiv', 'producto');
+prodPag.classList.add('col-12', 'h200', 'border', 'bg-white', 'rounded', 'mt-3', 'd-flex', 'align-items-center', 'p-3', 'flex-row', 'producto');
 prodPag.setAttribute("id","row_"+producto.id);
-prodPag.innerHTML = `
+prodPag.innerHTML = `      <div class="w-20">
 <img src="${producto.img}" alt="" class="imagensitaPc"><img>
+</div>
 
 <div class="p-3 d-flex flex-column w-60 h-150">
-<h3 class="h3productos">${ producto.nombre}</h3>                                            
+<h3>${ producto.nombre}</h3>                                            
 <p>${producto.descripcion}</p>
 </div>
 
 <div class="d-flex align-items-center justify-content-center flex-column w-20 h-150">
 <p class="precio">$${producto.precio}</p>
-<a href="javascript:aniadirCarrito(${producto.id})" <button class="custom-btn btn-7">COMPRAR</button></a>
+<a href="javascript:aniadirCarrito(${producto.id})" class="btn btn-primary">Agregar al carrito</a>
 </div>`; 
 divProductos.appendChild(prodPag);
 })
@@ -56,106 +57,103 @@ divProductos.appendChild(prodPag);
 }
 
 /* para recorrer los productos y que lo muestre en el carrito */
- addCart (infoProducto) { 
+addCart (infoProducto) { 
 
 
-    const estaDisponible = carrito.some(producto => producto.id === infoProducto.id); 
+const estaDisponible = carrito.some(producto => producto.id === infoProducto.id); 
 
-     if(estaDisponible){
-        const articulos = carrito.map( producto => {
+ if(estaDisponible){
+    const articulos = carrito.map( producto => {
 
-            if(producto.id === infoProducto.id){
+        if(producto.id === infoProducto.id){
 
-                producto.stock++;
+            producto.stock++;
 
-                return producto;
-                
-            }
+            return producto;
             
-            else{
+        }
+        
+        else{
 
-                return producto;
+            return producto;
 
-            }
-      
+        }
+  
 
-        })
-                
-        alert("Agregado nuevamente");
-    
-     }else{
-        carrito.push(infoProducto);
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Agregado al carrito',
-            showConfirmButton: false,
-            timer: 1500
-          }); 
-    }
-    this.actualizarCarrito();
+    })
+            
+    alert("Agregado nuevamente");
+
+ }else{
+    carrito.push(infoProducto);
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Agregado al carrito',
+        showConfirmButton: false,
+        timer: 1500
+      }); 
+}
+this.actualizarCarrito();
 
 }
 
 
 mostrarTodo(){  
-    let descripcionCarrito = document.querySelector("#clickBox"); 
-    descripcionCarrito.innerHTML = ""; 
+let descripcionCarrito = document.querySelector("#clickBox"); 
+descripcionCarrito.innerHTML = ""; 
 
-    carrito.forEach((producto) =>{ 
-        
-        const fila = document.createElement('div');
-        fila.classList.add(".divinner");
-        fila.innerHTML = `<div class="contenedorCarrito">
-        <div class="divinner">
-        <img src="./alienware.jpg" alt="" class="imagensitaPc"><img>
-          
-        <div class="parrafos">
-        <h3>${producto.nombre}</h3> 
-                                    <p>${producto.descripcion}</p>
-                                    <p class="precio">${producto.precio}</p>
-                                </div>
-                                </div>
-                                </div>`;
+carrito.forEach((producto) =>{ 
+    
+    const fila = document.createElement('div');
+    fila.classList.add(".divinner");
+    fila.innerHTML = `<div class="divinner">
+    <img src="./alienware.jpg" alt="" class="imagensitaPc"><img>
+    </div>
+    <div class="parrafos">
+                                <h3>${producto.nombre}</h3>                                            
+                                <p>${producto.descripcion}</p>
+                                <p class="precio">${producto.precio}</p>
+                            </div>`;
 
-                                descripcionCarrito.appendChild(fila);
+                            descripcionCarrito.appendChild(fila);
 })             
 } 
 
 /* contar productos */
 contarCarrito(){
 
-    let contadorProductos = 0;
+let contadorProductos = 0;
 
-    carrito.forEach((producto) => {
+carrito.forEach((producto) => {
 
-        contadorProductos = contadorProductos + parseInt(producto.stock);
-    })
+    contadorProductos = contadorProductos + parseInt(producto.stock);
+})
 
-    return contadorProductos;
+return contadorProductos;
 }
 /* aplicar en el if y else para que las 2 funciones se ejecuten */
 actualizarCarrito(){
 
-        
-    this.realizarCuenta();
+    
+this.realizarCuenta();
 
-    
-    this.mostrarTodo();
 
-    
-    this.storage();
-    
+this.mostrarTodo();
+
+
+
+
 }
 
 /* actualiza el contador en el carrito */
 realizarCuenta(){ 
 
-    let totalArticulos = this.contarCarrito();
+let totalArticulos = this.contarCarrito();
 
-    let countCarrito = document.querySelector("#carritoCarrito");
+let countCarrito = document.querySelector("#carritoCarrito");
 
-    countCarrito.innerHTML = totalArticulos;
+countCarrito.innerHTML = totalArticulos;
 
 }
 
