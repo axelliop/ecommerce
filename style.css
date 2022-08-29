@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Orbitron', sans-serif;
-
+   
     
 }
 
@@ -140,27 +140,6 @@ main {
 }
 
 
-#productoInfo{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-#productoInfo div{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    background-color: rgb(2, 2, 2);
-    border: 5px solid #000;
-    border-radius: 10px;
-    margin: 20px;
-}
-#productoInfo div img{
-    width: 50%;
-}
-
-.contenedorCarrito{
-padding: 1vh;
-}
-
 #offcanvasRightLabel{
     padding-left: 3vh;
     text-align: center;
@@ -168,17 +147,41 @@ padding: 1vh;
     color: black;
 }
 
+.h3productos{
+  font-size: 2vh;
+}
+
 .contenedorDiv{
-    border-style: dotted;
+    border-style: solid;
     border-color: rgb(104, 104, 104);
     display: flex;
     flex-direction: row;
     background-color: rgb(255, 255, 255);
-    padding: 40px;
-    margin: 40px;
-    height: 200;
+    padding-top: 2vh;
+    padding-left: 2vh;
+    height: 17vh;
+    font-size: 1.5vh;
+    justify-content: space-evenly;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------- */
+
+
+
+
 
 .btn-7 {
     background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
@@ -263,7 +266,7 @@ padding: 1vh;
     margin: 20px;
   }
   .custom-btn {
-    width: 130px;
+    width: 10vh;
     height: 40px;
     color: rgb(53, 47, 47);
     border-radius: 5px;
@@ -278,3 +281,12 @@ padding: 1vh;
      4px 4px 5px 0px rgba(0,0,0,.1);
     outline: none;
   }
+
+
+  /* ------------------- */
+
+  
+
+
+
+  

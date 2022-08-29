@@ -38,17 +38,16 @@ let prodPag = document.createElement('div');
 prodPag.classList.add('contenedorDiv', 'producto');
 prodPag.setAttribute("id","row_"+producto.id);
 prodPag.innerHTML = `
-
 <img src="${producto.img}" alt="" class="imagensitaPc"><img>
 
 <div class="p-3 d-flex flex-column w-60 h-150">
-<h3>${ producto.nombre}</h3>                                            
+<h3 class="h3productos">${ producto.nombre}</h3>                                            
 <p>${producto.descripcion}</p>
 </div>
 
 <div class="d-flex align-items-center justify-content-center flex-column w-20 h-150">
 <p class="precio">$${producto.precio}</p>
-<a href="javascript:aniadirCarrito(${producto.id})" <button class="custom-btn btn-7">COMPRAR</a></button>
+<a href="javascript:aniadirCarrito(${producto.id})" button class="custom-btn btn-7">COMPRAR</button></a>
 </div>`; 
 divProductos.appendChild(prodPag);
 })
