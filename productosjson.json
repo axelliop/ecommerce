@@ -1,0 +1,28 @@
+{
+    "productos": [
+    {
+        "id": 1, 
+        "nombre": "PLAYSTATION 5",
+        "descripcion": "la mejor ps5 del mercado",
+        "precio": 100000,
+        "img":"alienware.jpg",
+        "stock": 1
+        },
+        {
+        "id": 2, 
+        "nombre": "SMART TV",
+        "descripcion": "el mejor smartTv del mercado",
+        "precio": 100000,
+        "img":"alienware.jpg",
+        "stock": 1
+        },
+        {
+        "id": 3, 
+        "nombre": "XBOX SERIES",
+        "descripcion": "la mejor XBOX del mercado",
+        "precio": 100000,
+        "img":"alienware.jpg",
+        "stock": 1
+        }
+        ]
+    }

@@ -1,33 +1,32 @@
 class GestionarProductos{
     iniciar /* metodo para iniciar */(){
-    productos = [
-{
-    "id": 1, 
-    "nombre": "PLAYSTATION 5",
-    "descripcion": "la mejor pc del mercado",
-    "precio": 100000,
-    "img":"alienware.jpg",
-    "stock": 1
-    },
-    {
-    "id": 2, 
-    "nombre": "SMART TV",
-    "descripcion": "la mejor heladdera del mercado",
-    "precio": 100000,
-    "img":"alienware.jpg",
-    "stock": 1
-    },
-    {
-    "id": 3, 
-    "nombre": "XBOX SERIES",
-    "descripcion": "el mejor lavarropas del mercado",
-    "precio": 100000,
-    "img":"alienware.jpg",
-    "stock": 1
-    }
-    ]
 
+
+fetch(link)
+
+.then(respuesta => respuesta.json())
+.then(resultado =>{
+
+    productos = resultado.productos;
+
+    this.cargarProductos(productos);
+})
+
+    
+        
+    this.mostrarTodo();
+    
+    this.actualizarCarrito();
 }
+
+
+storage(){ 
+       
+    localStorage.setItem("carritos",JSON.stringify(carrito));
+/* ----HACER ESTO TAMBIEN------ */
+}
+
+
 
     cargarProductos( productos ) {
         const divProductos    = document.querySelector('#productos'); 
@@ -36,11 +35,11 @@ class GestionarProductos{
 productos.forEach((producto) =>{  
 
 let prodPag = document.createElement('div'); 
-prodPag.classList.add('col-12', 'h200', 'border', 'bg-white', 'rounded', 'mt-3', 'd-flex', 'align-items-center', 'p-3', 'flex-row', 'producto');
+prodPag.classList.add('contenedorDiv', 'producto');
 prodPag.setAttribute("id","row_"+producto.id);
-prodPag.innerHTML = `      <div class="w-20">
+prodPag.innerHTML = `
+
 <img src="${producto.img}" alt="" class="imagensitaPc"><img>
-</div>
 
 <div class="p-3 d-flex flex-column w-60 h-150">
 <h3>${ producto.nombre}</h3>                                            
@@ -49,7 +48,7 @@ prodPag.innerHTML = `      <div class="w-20">
 
 <div class="d-flex align-items-center justify-content-center flex-column w-20 h-150">
 <p class="precio">$${producto.precio}</p>
-<a href="javascript:aniadirCarrito(${producto.id})" class="btn btn-primary">Agregar al carrito</a>
+<a href="javascript:aniadirCarrito(${producto.id})" <button class="custom-btn btn-7">COMPRAR</a></button>
 </div>`; 
 divProductos.appendChild(prodPag);
 })
@@ -107,13 +106,16 @@ mostrarTodo(){
         
         const fila = document.createElement('div');
         fila.classList.add(".divinner");
-        fila.innerHTML = `<div class="divinner">
+        fila.innerHTML = `<div class="contenedorCarrito">
+        <div class="divinner">
         <img src="./alienware.jpg" alt="" class="imagensitaPc"><img>
-        </div>
+          
         <div class="parrafos">
-                                    <h3>${producto.nombre}</h3>                                            
+        <h3>${producto.nombre}</h3> 
                                     <p>${producto.descripcion}</p>
                                     <p class="precio">${producto.precio}</p>
+                                </div>
+                                </div>
                                 </div>`;
 
                                 descripcionCarrito.appendChild(fila);
@@ -142,7 +144,7 @@ actualizarCarrito(){
     this.mostrarTodo();
 
     
-
+    this.storage();
     
 }
 
