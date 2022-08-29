@@ -10,13 +10,13 @@ fetch(link)
     productos = resultado.productos;
 
     this.cargarProductos(productos);
-    this.mostrarTodo();
+
 })
 
     
         
     
-    
+this.mostrarTodo();
     this.actualizarCarrito();
 }
 
@@ -48,7 +48,8 @@ prodPag.innerHTML = `
 
 <div class="d-flex align-items-center justify-content-center flex-column w-20 h-150">
 <p class="precio">$${producto.precio}</p>
-<a href="javascript:aniadirCarrito(${producto.id})" <button class="custom-btn btn-7">COMPRAR</button></a>
+<a href="javascript:aniadirCarrito(${producto.id})" class="btn btn-primary">Agregar al carrito</a>
+                                        </div>>
 </div>`; 
 divProductos.appendChild(prodPag);
 })
