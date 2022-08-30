@@ -1,14 +1,12 @@
-
-
 let carrito = [];
 let productos = [];
 
 let gestor; /* variable vacia para despues aplicarla en el new ((clase)) */
+const link = './productosjson.json';
 
 
 
-
-document.addEventListener('DOMContentLoaded',() =>{
+document.addEventListener('DOMContentLoaded', () => {
 
     carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     gestor = new GestionarProductos();
