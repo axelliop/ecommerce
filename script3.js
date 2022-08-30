@@ -27,8 +27,10 @@ class GestionarProductos{
     "stock": 1
     }
     ]
+
+    this.actualizarCarrito()
 this.cargarProductos(productos)
-this.actualizarCarrito()
+
 this.realizarCuenta()
 }
 
@@ -64,7 +66,7 @@ divProductos.appendChild(prodPag);
 
 storage(){ 
        
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 /* ----HACER ESTO TAMBIEN------ */
 }
 
@@ -143,7 +145,6 @@ actualizarCarrito(){
 
         
     this.realizarCuenta();
-
     
     this.mostrarTodo();
 

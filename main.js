@@ -9,12 +9,11 @@ let gestor; /* variable vacia para despues aplicarla en el new ((clase)) */
 
 
 
-
     carrito = JSON.parse(localStorage.getItem('carrito'))
     gestor = new GestionarProductos();
     gestor.iniciar();
 
-
+    gestor.cargarProductos(productos);
 
 
 function aniadirCarrito(id) {
@@ -29,4 +28,3 @@ function aniadirCarrito(id) {
 
     gestor.addCart(producto); /* aplico la funcion addcart llamando al elemento producto */
 }
-gestor.cargarProductos(productos);
