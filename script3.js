@@ -96,22 +96,42 @@ class GestionarProductos {
     mostrarTodo() {
         let descripcionCarrito = document.querySelector("#clickBox");
         descripcionCarrito.innerHTML = "";
-
+        let total = 0;
         carrito.forEach((producto) => {
 
             const fila = document.createElement('div');
             fila.classList.add(".divinner");
+            total += parseInt(producto.precio);
             fila.innerHTML = `<div class="divinner">
-        <img src="./alienware.jpg" alt="" class="imagensitaPc"><img>
-        
+            <img src="${producto.img}" width="80"/><img>
+
         <div class="parrafos">
-                                    <h3>${producto.nombre}</h3>                                            
-                                    <p>${producto.descripcion}</p>
-                                    <p class="precio">${producto.precio}</p>
-                                </div></div>`;
+            ${producto.nombre}
+
+
+             ${producto.precio}
+
+<div class="enRojo">
+            Añadidos: ${producto.stock}
+            </div>
+</div>
+        </div>`;
 
             descripcionCarrito.appendChild(fila);
         })
+
+        let row = document.createElement('div');
+        row.classList.add(".divinner");
+        
+        row.innerHTML = `   
+                        <div class="totalPagar">
+                            Total a pagar:
+                        
+
+                            <b>$ ${total}</b>
+                        </div>`;
+
+        descripcionCarrito.appendChild(row);
     }
 
     /* contar productos */
