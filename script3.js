@@ -27,10 +27,8 @@ class GestionarProductos{
     "stock": 1
     }
     ]
-
-    this.actualizarCarrito()
 this.cargarProductos(productos)
-
+this.actualizarCarrito()
 this.realizarCuenta()
 }
 
