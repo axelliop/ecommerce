@@ -98,13 +98,7 @@ storage(){
     
      }else{
         carrito.push(infoProducto);
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Agregado al carrito',
-            showConfirmButton: false,
-            timer: 1500
-          }); 
+        alert("lo compraste")
     }
     this.actualizarCarrito();
 
