@@ -62,6 +62,11 @@ divProductos.appendChild(prodPag);
 
 }
 
+storage(){ 
+       
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+/* ----HACER ESTO TAMBIEN------ */
+}
 
 /* para recorrer los productos y que lo muestre en el carrito */
  addCart (infoProducto) { 
@@ -142,6 +147,7 @@ actualizarCarrito(){
     
     this.mostrarTodo();
 
+    this.storage();
 
     
 }
