@@ -9,7 +9,7 @@ let gestor; /* variable vacia para despues aplicarla en el new ((clase)) */
 
 
 
-    carrito = JSON.parse(localStorage.getItem('carrito'))
+
     gestor = new GestionarProductos();
     gestor.iniciar();
 
