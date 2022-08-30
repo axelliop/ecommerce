@@ -8,14 +8,14 @@ let gestor; /* variable vacia para despues aplicarla en el new ((clase)) */
 
 
 
-document.addEventListener('DOMContentLoaded',() =>{
+
 
     carrito = JSON.parse(localStorage.getItem('carrito'))
     gestor = new GestionarProductos();
     gestor.iniciar();
 
-    gestor.cargarProductos(productos);
-})
+
+
 
 function aniadirCarrito(id) {
     const prod = document.querySelector('#row_' + id); /* aplico al div row. llamo al obj id */
@@ -29,3 +29,4 @@ function aniadirCarrito(id) {
 
     gestor.addCart(producto); /* aplico la funcion addcart llamando al elemento producto */
 }
+gestor.cargarProductos(productos);

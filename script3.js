@@ -28,8 +28,8 @@ class GestionarProductos{
     }
     ]
 this.cargarProductos(productos)
-this.mostrarTodo()
 this.actualizarCarrito()
+this.realizarCuenta()
 }
 
 
