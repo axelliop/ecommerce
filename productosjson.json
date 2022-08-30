@@ -2,7 +2,7 @@
     "productos": [
     {
         "id": 1, 
-        "nombre": "PLAYSTATION 5",
+        "nombre": "PS5",
         "descripcion": "la mejor ps5 del mercado",
         "precio": 100000,
         "img":"alienware.jpg",

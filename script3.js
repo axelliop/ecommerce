@@ -103,12 +103,12 @@ class GestionarProductos {
             fila.classList.add(".divinner");
             fila.innerHTML = `<div class="divinner">
         <img src="./alienware.jpg" alt="" class="imagensitaPc"><img>
-        </div>
+        
         <div class="parrafos">
                                     <h3>${producto.nombre}</h3>                                            
                                     <p>${producto.descripcion}</p>
                                     <p class="precio">${producto.precio}</p>
-                                </div>`;
+                                </div></div>`;
 
             descripcionCarrito.appendChild(fila);
         })

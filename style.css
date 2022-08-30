@@ -58,11 +58,11 @@ main {
 
 .header {
     width: 100%;
-    background-image: linear-gradient(to right, #252525, rgb(3, 191, 248));
+    background-image: linear-gradient(to right, #ffffff, rgb(7, 7, 7));
 }
 
 .navbar .navbar-brand {
-    color: rgb(3, 191, 248);
+    color: rgb(0, 0, 0);
 }
 
 .nav-link {
@@ -78,19 +78,6 @@ main {
     color: white;
 }
 
-.square {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: #4f6fff;
-    margin: 0 20px 20px 0;
-    text-align: center;
-    line-height: 150px;
-    color: #ffffff;
-    user-select: none;
-    box-sizing:content-box;
-
-}
 
 
 .color {
@@ -120,6 +107,8 @@ main {
     text-align: center;
     color: black;
     border-style: solid;
+    margin: 2vh;
+    font-size: 1.5vh;
 }
 
 .imagensitaPc{
@@ -136,7 +125,7 @@ main {
     align-items: center;
     width: 20vh;
     color: black;
-    background-color: rgb(182, 182, 182);
+    font-size: 1.5vh;
 }
 
 
@@ -282,6 +271,17 @@ main {
     outline: none;
   }
 
+
+  #iconoCarrito{
+    width: 3vh;
+    height: 20;
+  }
+
+  #carritoCarrito{
+    font-size: 1vh;
+    height: 2vh;
+    width: 2vh;
+  }
 
   /* ------------------- */
 
