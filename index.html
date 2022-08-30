@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -20,26 +22,53 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">ElectroHogar</a>
-          <div class="col-3 d-flex align-items-center justify-content-end">
+          
+          <div class="container d-flex align-items-center justify-content-between">
 
-            <a class="cart position-relative d-inline-flex" aria-label="View your shopping cart"
-              data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <div class="logo col-3 d-flex align-items-center justify-content-start">
+            </div>
+  
+            <div class="col-3 d-flex align-items-center justify-content-end">
+  
+                <a
+  
+                    class="cart position-relative d-inline-flex" 
+                    aria-label="View your shopping cart"
+                    data-bs-toggle="offcanvas" 
+                    data-bs-target="#offcanvasRight" 
+                    aria-controls="offcanvasRight">
+  
+                    <i class="fa-solid fa-bag-shopping fa-2x" id="iconoCarrito">
+                        <span class="position-absolute 
+                                     top-0 
+                                     start-100 
+                                     translate-middle 
+                                     badge 
+                                     rounded-pill 
+                                     bg-danger"
+  
+                                     id="carritoCarrito">
+                                0
+                        </span>
+                    </i>
+  
+                </a>
+  
+            </div>
+  
+        </div>
 
-              <i class="fa-solid fa-bag-shopping fa-2x" id="iconoCarrito">
-                <span class="position-absolute 
-                                 top-0 
-                                 start-100 
-                                 translate-middle 
-                                 badge 
-                                 rounded-pill 
-                                 bg-danger" id="carritoCarrito">
-                  0
-                </span>
-              </i>
 
-            </a>
 
-          </div>
+
+
+
+
+
+
+
+
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
