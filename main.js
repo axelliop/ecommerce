@@ -20,9 +20,13 @@ function aniadirCarrito(id) {
         prod.querySelector('h3').textContent,
         prod.querySelector('p').textContent,
         prod.querySelector('.precio').textContent,
-        /* llamo h3*/
-        /* llamo precio */
+     
     )
 
-    gestor.addCart(producto); /* aplico la funcion addcart llamando al elemento producto */
+    gestor.addCart(producto); 
+}
+
+/* eliminar productos */
+function eliminar(id) {   
+    gestor.eliminarArticulo(id);
 }

@@ -9,7 +9,6 @@ class GestionarProductos {
 
             productos     = resultado.productos;
 
-                    // Solo quiero mostrar los articulos destacados.
         let productosDestacados = productos
 
         this.cargarProductos(productosDestacados);
@@ -35,7 +34,7 @@ class GestionarProductos {
             prodPag.classList.add('col-12', 'h200', 'border', 'bg-white', 'rounded', 'mt-3', 'd-flex', 'align-items-center', 'p-3', 'flex-row', 'producto');
             prodPag.setAttribute("id", "row_" + producto.id);
             prodPag.innerHTML = `      <div class="w-20">
-<img src="${producto.img}" alt="" class="imagensitaPc"><img>
+<img src="${producto.img}" alt="" class="imagensitaPc ${producto.id}'"><img>
 </div>
 
 <div class="p-3 d-flex flex-column w-60 h-150">
@@ -82,11 +81,29 @@ class GestionarProductos {
 
             })
 
-            alert("Agregado nuevamente");
+            Toastify({
+                text: "Agregado nuevamente",
+                duration: 2000,
+                gravity: 'bottom',
+                color: 'white'
+
+            }).showToast();
 
         } else {
             carrito.push(infoProducto);
-            alert("lo compraste")
+            Swal.fire({
+                title: 'Agregado al carrito',
+                width: 600,
+                padding: '3em',
+                color: 'black',
+                background: '#fff url(https://c.tenor.com/JJ4J3TNZWAgAAAAj/color.gif)',
+                backdrop: `
+                  rgba(0,0,123,0.4)
+                  url("https://c.tenor.com/2IvxDIodyJwAAAAj/buy-buy-buy-trading.gif")
+                  left top
+                  no-repeat
+                `
+              })
         }
         this.actualizarCarrito();
 
@@ -103,17 +120,25 @@ class GestionarProductos {
             fila.classList.add(".divinner");
             total += parseInt(producto.precio);
             fila.innerHTML = `<div class="divinner">
-            <img src="${producto.img}" width="80"/><img>
+
+            
+            <img src='${producto.img}' width="80">
+            </img>
 
         <div class="parrafos">
             ${producto.nombre}
 
 
-             ${producto.precio}
+             Precio:${producto.precio}
 
 <div class="enRojo">
             Añadidos: ${producto.stock}
             </div>
+            <div class="col-2 d-flex align-items-center justify-content-center p-2 border-bottom">
+                            <a href="javascript:eliminar(${producto.id})">
+                            <i class="fa-solid fa-trash" id="botonEliminar"></i>
+                            </a>
+                        </div>
 </div>
         </div>`;
 
@@ -171,4 +196,15 @@ class GestionarProductos {
     }
 
 
+/* eliminar producto del carrito */
+    eliminarArticulo(id) { 
+
+        carrito = carrito.filter(producto => producto.id != id);
+        this.actualizarCarrito();
+            
+    }
+    
 }
+
+/* -------------------- */
+
