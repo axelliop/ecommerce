@@ -16,7 +16,7 @@ class GestionarProductos {
 
         
     })  
-
+this.mostrarTodo()
         this.actualizarCarrito()
         this.realizarCuenta()
     }
@@ -122,7 +122,7 @@ class GestionarProductos {
             fila.innerHTML = `<div class="divinner">
 
             
-            <img src='${producto.img}' width="80">
+            <img src=${producto.img} width="80">
             </img>
 
         <div class="parrafos">

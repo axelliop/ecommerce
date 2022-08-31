@@ -19,7 +19,7 @@ function aniadirCarrito(id) {
     let producto = new Stock(id,
         prod.querySelector('h3').textContent,
         prod.querySelector('p').textContent,
-        prod.querySelector('.precio').textContent,
+        prod.querySelector('.precio').textContent.substring(1,6),
      
     )
 
