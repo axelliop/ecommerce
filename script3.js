@@ -96,7 +96,7 @@ this.mostrarTodo()
                 width: 600,
                 padding: '3em',
                 color: 'black',
-                background: '#fff url(https://c.tenor.com/JJ4J3TNZWAgAAAAj/color.gif)',
+                background: '#ffff',
                 backdrop: `
                   rgba(0,0,123,0.4)
                   url("https://c.tenor.com/2IvxDIodyJwAAAAj/buy-buy-buy-trading.gif")
@@ -118,18 +118,16 @@ this.mostrarTodo()
 
             const fila = document.createElement('div');
             fila.classList.add(".divinner");
-            total += parseInt(producto.precio);
+            total += parseInt(producto.precio) * producto.stock;
             fila.innerHTML = `<div class="divinner">
 
             
-            <img src=${producto.img} width="80">
-            </img>
+            <img src=${producto.img} alt="" width="80"><img>
 
         <div class="parrafos">
             ${producto.nombre}
-
-
-             Precio:${producto.precio}
+<br>
+             Precio: $${producto.precio}
 
 <div class="enRojo">
             Añadidos: ${producto.stock}
@@ -202,6 +200,13 @@ this.mostrarTodo()
         carrito = carrito.filter(producto => producto.id != id);
         this.actualizarCarrito();
             
+        Toastify({
+            text: "Producto eliminado del carrito",
+            duration: 2000,
+            gravity: 'bottom',
+            color: 'red'
+
+        }).showToast();
     }
     
 }

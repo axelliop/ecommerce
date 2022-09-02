@@ -20,7 +20,7 @@ function aniadirCarrito(id) {
         prod.querySelector('h3').textContent,
         prod.querySelector('p').textContent,
         prod.querySelector('.precio').textContent.substring(1,6),
-     
+        prod.querySelector('.imagensitaPc').src,
     )
 
     gestor.addCart(producto); 
