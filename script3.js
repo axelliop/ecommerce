@@ -19,6 +19,7 @@ class GestionarProductos {
 this.mostrarTodo()
         this.actualizarCarrito()
         this.realizarCuenta()
+        this.finalizarCompra()
     }
 
 
@@ -136,9 +137,13 @@ this.mostrarTodo()
                             <a href="javascript:eliminar(${producto.id})">
                             <i class="fa-solid fa-trash" id="botonEliminar"></i>
                             </a>
+
+                           
+                            
                         </div>
 </div>
-        </div>`;
+
+        `;
 
             descripcionCarrito.appendChild(fila);
         })
@@ -149,10 +154,12 @@ this.mostrarTodo()
         row.innerHTML = `   
                         <div class="totalPagar">
                             Total a pagar:
-                        
+                            
 
                             <b>$ ${total}</b>
-                        </div>`;
+                            
+                        </div>
+                    `;
 
         descripcionCarrito.appendChild(row);
     }
@@ -209,6 +216,25 @@ this.mostrarTodo()
         }).showToast();
     }
     
+    finalizarCompra() {
+        let botonFin = document.getElementById("boton-vaciar");
+        let finCarrito = document.querySelector("#clickBox");
+        let borrarCarrito = document.querySelector("#carritoCarrito");
+    
+        botonFin.addEventListener("click", () => {
+          localStorage.clear();
+          finCarrito.innerHTML = "";
+          borrarCarrito.innerHTML = 0;
+    
+          swal.fire({
+            icon: "success",
+            confirmButtonColor: "blue",
+            title: "Compra Finalizada!",
+            text: "El producto está siendo preparado para ser enviado a tu domicilio.",
+          });
+        });
+    
+}
 }
 
 /* -------------------- */

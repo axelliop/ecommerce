@@ -1,6 +1,7 @@
 let carrito = [];
 let productos = [];
 
+
 let gestor; /* variable vacia para despues aplicarla en el new ((clase)) */
 const link = './productosjson.json';
 
