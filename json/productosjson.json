@@ -13,15 +13,15 @@
         "nombre": "SMART TV",
         "descripcion": "el mejor smartTv del mercado",
         "precio": 100000,
-        "img":"./img/alienware.jpg",
+        "img":"./img/smarttv.jpg",
         "stock": 1
         },
         {
         "id": 3, 
-        "nombre": "XBOX SERIES",
+        "nombre": "XBOX SERIES S",
         "descripcion": "la mejor XBOX del mercado",
         "precio": 100000,
-        "img":"./img/alienware.jpg",
+        "img":"./img/xboxseries.jpg",
         "stock": 1
         },
         {
@@ -29,7 +29,7 @@
             "nombre": "PAD CON LUCES",
             "descripcion": "la mejor ps5 del mercado",
             "precio": 100000,
-            "img":"./img/alienware.jpg",
+            "img":"./img/padconluces.jpg",
             "stock": 1
             },
             {
@@ -37,7 +37,7 @@
             "nombre": "TABLET SAMSUNG",
             "descripcion": "el mejor smartTv del mercado",
             "precio": 100000,
-            "img":"./img/alienware.jpg",
+            "img":"./img/tabletsamsung.jpg",
             "stock": 1
             },
             {
@@ -45,7 +45,7 @@
             "nombre": "IPHONE 13",
             "descripcion": "la mejor XBOX del mercado",
             "precio": 100000,
-            "img":"./img/alienware.jpg",
+            "img":"./img/iphone13.jpg",
             "stock": 1
             }
         ]
